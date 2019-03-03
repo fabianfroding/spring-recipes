@@ -1,0 +1,25 @@
+//==============================
+    NOTES
+//==============================
+
+Dependency Injection:
+Process of constructing and assigning objects without explicitly writing code. (?)
+For example @Autowire on objects with @Component annotation.
+
+@Autowire:
+Constructs and assign an object as soon as it's needed. Object requires @Component annotation.
+
+@ComponentScan:
+Scans for controllers and other things. Things annotated with @Component?
+
+@PathVariable:
+Acts as placeholders that can be used in method parameters.
+Ex:
+    @RequestMapping("/recipe/{name}")
+    public String recipeDetails(@PathVariable String name, ...)
+
+@RequestMapping:
+Maps a certain URI request to a Java method.
+
+@ResponseBody:
+Use returned value as plain text instead of a html template.
