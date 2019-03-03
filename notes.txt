@@ -9,6 +9,9 @@ For example @Autowire on objects with @Component annotation.
 @Autowire:
 Constructs and assign an object as soon as it's needed. Object requires @Component annotation.
 
+@Bean:
+???
+
 @ComponentScan:
 Scans for controllers and other things. Things annotated with @Component?
 
@@ -18,8 +21,14 @@ Ex:
     @RequestMapping("/recipe/{name}")
     public String recipeDetails(@PathVariable String name, ...)
 
+@Repository:
+???
+
 @RequestMapping:
 Maps a certain URI request to a Java method.
 
 @ResponseBody:
 Use returned value as plain text instead of a html template.
+
+@SuppressWarnings:
+???
