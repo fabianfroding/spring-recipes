@@ -22,7 +22,8 @@ Ex:
     public String recipeDetails(@PathVariable String name, ...)
 
 @Repository:
-???
+Allows CRUD operations on database tables. Specialization of @Component.
+Makes Spring pick up the class as an autowire-able implementation of the an interface. (?)
 
 @RequestMapping:
 Maps a certain URI request to a Java method.
@@ -31,4 +32,5 @@ Maps a certain URI request to a Java method.
 Use returned value as plain text instead of a html template.
 
 @SuppressWarnings:
-???
+Suppresses compile warnings. Related to java generics.
+Prevents an "unparameterized list" warning(?).

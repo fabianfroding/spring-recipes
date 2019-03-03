@@ -24,13 +24,12 @@ public class TemplateConfig {
         return springTemplateEngine;
     }
 
-    // Not working. App still works when disabled though.
-    /* @Bean
+    @Bean
     public ThymeleafViewResolver viewResolver() {
         final ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
         viewResolver.setOrder(1);
         return viewResolver;
-    } */
+    }
 
 }

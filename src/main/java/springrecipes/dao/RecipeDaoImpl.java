@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import springrecipes.model.Recipe;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
@@ -19,9 +18,11 @@ public class RecipeDaoImpl implements RecipeDao {
     @SuppressWarnings("unchecked")
     public List<Recipe> findAll() {
         Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<Recipe> criteria = builder.createQuery(Recipe.class);
+        // Create CriteriaBuilder and CriteriaQuery.
+        CriteriaQuery<Recipe> criteria = session.getCriteriaBuilder().createQuery(Recipe.class);
+        // Specify criteria root.
         criteria.from(Recipe.class);
+        // Execute query.
         List<Recipe> recipes = session.createQuery(criteria).getResultList();
         session.close();
         return recipes;
