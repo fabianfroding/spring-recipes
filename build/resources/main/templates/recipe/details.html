@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="layout :: head"></head>
+<head th:replace="layout :: head('Details')"></head>
 <body>
     <h1>Recipe Details</h1>
     <h2 th:text="${recipe.name}">Recipe Name</h2>
-    <p th:text="|Added by: ${recipe.username}|">Recipe Name</p>
-    <p th:text="|Added on: ${recipe.dateAdded}|">Recipe Name</p>
+    <p th:text="@{|Added by: ${recipe.username}|}">Recipe Username</p>
+    <p th:text="@{|Added on: ${recipe.dateAdded}|}">Recipe Date Added</p>
 </body>
 </html>

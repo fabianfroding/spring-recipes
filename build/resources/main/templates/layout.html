@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<head th:fragment="head(page_title)" lang="en">
     <meta charset="UTF-8">
 
     <link rel="icon" th:href="@{/favicon.png}" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
     <title th:text="'Recipe Book | ' + ${page_title}">Recipe Book</title>
-
 </head>
 <body>
-    <h1>Navbar n' stuff</h1>
+
 </body>
 </html>

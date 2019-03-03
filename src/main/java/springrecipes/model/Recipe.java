@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Recipe {
     private int id;
+    private int categoryId;
     private String name;
     private LocalDate dateAdded;
     private String username;
@@ -19,6 +20,12 @@ public class Recipe {
     }
     public void setId(int id) {
         this.id = id;
+    }
+    public int getCategoryId() {
+        return categoryId;
+    }
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
     public String getName() {
         return name;
