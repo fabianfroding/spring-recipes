@@ -1,11 +1,21 @@
 package springrecipes.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Category {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotNull
     private String name;
-    private List<Recipe> recipes;
+
+    @OneToMany(mappedBy = "category")
+    private List<Recipe> recipes = new ArrayList<>();
 
     //===== Constructor(s) =====//
     public Category(String name) {

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import springrecipes.data.CategoryRepository;
 import springrecipes.data.RecipeRepository;
+import springrecipes.model.Category;
 
 @Controller
 public class CategoryController {
@@ -22,9 +23,9 @@ public class CategoryController {
     }
 
     @RequestMapping("/categories/{id}")
-    public String categoryDetails(@PathVariable int id, ModelMap modelMap) {
-        modelMap.put("category", categoryRepository.findById(id));
-        modelMap.put("recipes", recipeRepository.findByCategoryId(id));
+    public String categoryDetails(@PathVariable Category category, ModelMap modelMap) {
+        //modelMap.put("category", categoryRepository.findById(id));
+        //modelMap.put("recipes", recipeRepository.findByCategory(category));
         return "category/details";
     }
 }

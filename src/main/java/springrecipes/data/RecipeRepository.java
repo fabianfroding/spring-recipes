@@ -1,6 +1,7 @@
 package springrecipes.data;
 
 import org.springframework.stereotype.Component;
+import springrecipes.model.Category;
 import springrecipes.model.Recipe;
 
 import java.util.ArrayList;
@@ -31,10 +32,10 @@ public class RecipeRepository {
         return null;
     }
 
-    public List<Recipe> findByCategoryId(int id) {
+    public List<Recipe> findByCategory(Category category) {
         List<Recipe> recipes = new ArrayList<>();
         for (Recipe recipe : ALL_RECIPES) {
-            if (recipe.getCategoryId() == id) {
+            if (recipe.getCategory() == category) {
                 recipes.add(recipe);
             }
         }

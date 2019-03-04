@@ -1,15 +1,25 @@
 package springrecipes.model;
 
-import java.time.LocalDate;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
+@Entity
 public class Recipe {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int categoryId;
+
+    @NotNull
     private String name;
-    private LocalDate dateAdded;
+
+    @ManyToOne
+    private Category category;
+    private LocalDateTime dateAdded = LocalDateTime.now();
     private String username;
 
     //===== Constructor(s) =====//
+    public Recipe() {}
     public Recipe(String name) {
         this.name = name;
     }
@@ -21,22 +31,22 @@ public class Recipe {
     public void setId(int id) {
         this.id = id;
     }
-    public int getCategoryId() {
-        return categoryId;
-    }
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public LocalDate getDateAdded() {
+    public Category getCategory() {
+        return category;
+    }
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    public LocalDateTime getDateAdded() {
         return dateAdded;
     }
-    public void setDateAdded(LocalDate dateAdded) {
+    public void setDateAdded(LocalDateTime dateAdded) {
         this.dateAdded = dateAdded;
     }
     public String getUsername() {

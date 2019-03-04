@@ -3,5 +3,11 @@
 <head th:replace="layout :: head('Form')"></head>
 <body>
     <h1>Recipe Form</h1>
+    <form th:action="@{${action}}" method="post" th:object="${recipe}">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{name}" placeholder="Name"/>
+        <input type="text" placeholder="Description"/>
+        <button th:text="${submit}" type="submit" class="button">Add</button>
+    </form>
 </body>
 </html>
