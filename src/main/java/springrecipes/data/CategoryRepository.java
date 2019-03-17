@@ -6,6 +6,7 @@ import springrecipes.model.Category;
 import java.util.Arrays;
 import java.util.List;
 
+/*
 @Component
 public class CategoryRepository {
     private static final List<Category> ALL_CATEGORIES = Arrays.asList(
@@ -29,3 +30,4 @@ public class CategoryRepository {
         return null;
     }
 }
+*/

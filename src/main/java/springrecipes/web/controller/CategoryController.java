@@ -5,20 +5,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import springrecipes.data.CategoryRepository;
-import springrecipes.data.RecipeRepository;
 import springrecipes.model.Category;
+import springrecipes.service.CategoryService;
+import springrecipes.service.RecipeService;
 
 @Controller
 public class CategoryController {
     @Autowired
-    private CategoryRepository categoryRepository;
+    private CategoryService categoryService;
     @Autowired
-    private RecipeRepository recipeRepository;
+    private RecipeService recipeService;
 
     @RequestMapping("/categories")
     public String listCategories(ModelMap modelMap) {
-        modelMap.put("categories", categoryRepository.findAll());
+        modelMap.put("categories", categoryService.findAll());
         return "category/index";
     }
 

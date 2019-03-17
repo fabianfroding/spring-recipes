@@ -3,6 +3,7 @@ package springrecipes.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Recipe {
@@ -12,6 +13,7 @@ public class Recipe {
 
     @NotNull
     private String name;
+    private String description;
 
     @ManyToOne
     private Category category;
@@ -36,6 +38,12 @@ public class Recipe {
     }
     public void setName(String name) {
         this.name = name;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
     }
     public Category getCategory() {
         return category;

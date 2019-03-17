@@ -3,5 +3,10 @@
 <head th:replace="layout :: head('Form')"></head>
 <body>
     <h1>Category Form</h1>
+    <form th:action="@{${action}}" method="post" th:object="${category}">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{name}" placeholder="Name"/>
+        <button th:text="${submit}" type="submit" class="button">Add</button>
+    </form>
 </body>
 </html>

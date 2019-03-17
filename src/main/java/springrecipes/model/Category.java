@@ -18,12 +18,9 @@ public class Category {
     private List<Recipe> recipes = new ArrayList<>();
 
     //===== Constructor(s) =====//
+    public Category() {}
     public Category(String name) {
         this.name = name;
-    }
-    public Category(String name, int id) {
-        this.name = name;
-        this.id = id;
     }
 
     //===== Getters & Setters =====//

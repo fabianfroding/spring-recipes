@@ -6,7 +6,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springrecipes.data.RecipeRepository;
 import springrecipes.model.Recipe;
 import springrecipes.service.RecipeService;
 
@@ -14,12 +13,10 @@ import springrecipes.service.RecipeService;
 public class RecipeController {
     @Autowired
     private RecipeService recipeService;
-    @Autowired
-    private RecipeRepository recipeRepository;
 
     @RequestMapping(value = {"/", "/recipes"})
     public String listRecipes(ModelMap modelMap) {
-        modelMap.put("recipes", recipeRepository.findAll());
+        modelMap.put("recipes", recipeService.findAll());
         return "recipe/index";
     }
 
