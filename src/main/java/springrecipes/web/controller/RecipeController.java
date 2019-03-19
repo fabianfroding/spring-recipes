@@ -23,10 +23,12 @@ public class RecipeController {
     @RequestMapping("/recipes/{id}")
     public String recipeDetails(@PathVariable int id, ModelMap modelMap) {
         modelMap.put("recipe", recipeService.findById(id));
+        modelMap.addAttribute("action", "/recipes/delete");
+        modelMap.addAttribute("submit", "Delete");
         return "recipe/details";
     }
 
-    @RequestMapping(value = "recipes/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/recipes/save", method = RequestMethod.POST)
     public String saveRecipe(Recipe recipe) {
         recipeService.save(recipe);
         return "redirect:/recipes/" + recipe.getId();
@@ -41,4 +43,11 @@ public class RecipeController {
         modelMap.addAttribute("submit", "Add");
         return "recipe/form";
     }
+
+    @RequestMapping(value = "/recipes/{id}/delete", method = RequestMethod.POST)
+    public String deleteRecipe(@PathVariable int id) {
+        recipeService.delete(recipeService.findById(id));
+        return "redirect:/recipes";
+    }
+
 }
