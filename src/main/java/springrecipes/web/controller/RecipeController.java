@@ -28,12 +28,6 @@ public class RecipeController {
         return "recipe/details";
     }
 
-    @RequestMapping(value = "/recipes/save", method = RequestMethod.POST)
-    public String saveRecipe(Recipe recipe) {
-        recipeService.save(recipe);
-        return "redirect:/recipes/" + recipe.getId();
-    }
-
     @RequestMapping("/recipes/add")
     public String formNewRecipe(ModelMap modelMap) {
         if(!modelMap.containsAttribute("recipe")) {
@@ -42,6 +36,12 @@ public class RecipeController {
         modelMap.addAttribute("action", "/recipes/save");
         modelMap.addAttribute("submit", "Add");
         return "recipe/form";
+    }
+
+    @RequestMapping(value = "/recipes/save", method = RequestMethod.POST)
+    public String saveRecipe(Recipe recipe) {
+        recipeService.save(recipe);
+        return "redirect:/recipes/" + recipe.getId();
     }
 
     @RequestMapping(value = "/recipes/{id}/delete", method = RequestMethod.POST)

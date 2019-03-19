@@ -1,10 +1,10 @@
-package springrecipes.service;
+package springrecipes.dao;
 
 import springrecipes.model.Category;
 
 import java.util.List;
 
-public interface CategoryService {
+public interface CategoryDao {
     List<Category> findAll();
     Category findById(int id);
     void save(Category category);
