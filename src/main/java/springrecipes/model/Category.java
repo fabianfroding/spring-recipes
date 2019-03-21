@@ -14,7 +14,7 @@ public class Category {
     @NotNull
     private String name;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
     private List<Recipe> recipes = new ArrayList<>();
 
     //===== Constructor(s) =====//

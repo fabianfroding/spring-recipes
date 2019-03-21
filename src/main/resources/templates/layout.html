@@ -10,5 +10,13 @@
 </head>
 <body>
 
+<div th:fragment="nav">
+    <nav>
+        <ul>
+            <li th:classappend="${#httpServletRequest.servletPath.equals('/') ? 'active' : ''}"><a th:href="@{/}">Recipes</a></li>
+        </ul>
+    </nav>
+</div>
+
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="layout :: head('Form')"></head>
 <body>
+    <div th:replace="layout :: nav"></div>
     <h1>Category Form</h1>
     <form th:action="@{${action}}" method="post" th:object="${category}">
         <input type="hidden" th:field="*{id}"/>
