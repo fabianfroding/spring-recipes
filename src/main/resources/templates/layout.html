@@ -14,6 +14,7 @@
     <nav>
         <ul>
             <li th:classappend="${#httpServletRequest.servletPath.equals('/') ? 'active' : ''}"><a th:href="@{/}">Recipes</a></li>
+            <li th:classappend="${#httpServletRequest.servletPath.equals('/categories') ? 'active' : ''}"><a th:href="@{/categories}">Categories</a></li>
         </ul>
     </nav>
 </div>

@@ -4,6 +4,7 @@
 <body>
     <div th:replace="layout :: nav"></div>
     <h1>Category Index</h1>
+    <button type="submit" th:classappend="${#httpServletRequest.servletPath.equals('/categories/add') ? 'active' : ''}"><a th:href="@{/categories/add}">+</a></button>
     <div th:each="category : ${categories}">
         <a th:href="@{|/categories/${category.id}|}">
             <h2 th:text="${category.name}">Category Name</h2>
