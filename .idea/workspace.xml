@@ -4,10 +4,8 @@
     <list default="true" id="973f73cd-3852-4449-9d09-791b213bf186" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/springrecipes.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/springrecipes.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recipe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recipe/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -57,11 +55,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="details.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recipe/details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recipe/form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -416,7 +432,6 @@
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/data/RecipeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/model/Recipe.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/dao/CategoryDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/dao/CategoryDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/service/CategoryService.java" />
@@ -424,13 +439,14 @@
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/CategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/model/Category.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/category/form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/category/details.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/category/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" />
+        <option value="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" />
       </list>
     </option>
   </component>
@@ -450,9 +466,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -485,6 +499,25 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springrecipes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-recipes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-recipes" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springrecipes" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-recipes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-recipes" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springrecipes" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-recipes" type="b2602c69:ProjectViewProjectNode" />
@@ -531,6 +564,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -650,12 +685,13 @@
       <workItem from="1553005641774" duration="4985000" />
       <workItem from="1553170240151" duration="452000" />
       <workItem from="1553195355209" duration="3380000" />
-      <workItem from="1553458920616" duration="1026000" />
+      <workItem from="1553458920616" duration="1150000" />
+      <workItem from="1553554383869" duration="1952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23622000" />
+    <option name="totallyTimeSpent" value="25698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -683,7 +719,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286517" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18657719" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.17583893" />
@@ -979,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/springrecipes/web/controller/CategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1011,13 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recipe/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1060,6 +1082,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recipe/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
         </state>
       </provider>
     </entry>

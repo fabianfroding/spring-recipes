@@ -8,6 +8,7 @@
     <p th:text="${recipe.description}">Recipe Description</p>
     <p th:text="@{|Added by: ${recipe.username}|}">Recipe Username</p>
     <p th:text="@{|Date added: ${recipe.dateAdded}|}">Recipe Date Added</p>
+    <a th:href="@{|/recipes/${recipe.id}/edit|}">Edit</a>
     <form th:action="@{|/recipes/${recipe.id}/delete|}" method="post">
         <button type="submit">Delete</button>
     </form>

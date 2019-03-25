@@ -50,4 +50,20 @@ public class RecipeController {
         return "redirect:/recipes";
     }
 
+    @RequestMapping(value ="recipes/{id}/edit")
+    public String formEditRecipe(@PathVariable int id, ModelMap modelMap) {
+        if (!modelMap.containsAttribute("recipe")) {
+            modelMap.addAttribute("recipe", recipeService.findById(id));
+        }
+        modelMap.addAttribute("action","/recipes/" + id);
+        modelMap.addAttribute("submit", "Update");
+        return "recipe/form";
+    }
+
+    @RequestMapping(value = "/recipes/{id}", method = RequestMethod.POST)
+    public String updateGif(Recipe recipe) {
+        recipeService.save(recipe);
+        return "redirect:/recipes/" + recipe.getId();
+    }
+
 }
