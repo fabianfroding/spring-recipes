@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springrecipes.model.Category;
+import springrecipes.model.Recipe;
 import springrecipes.service.CategoryService;
 
 @Controller
@@ -31,7 +32,7 @@ public class CategoryController {
     @RequestMapping("/categories/add")
     public String formNewCategory(ModelMap modelMap) {
         if(!modelMap.containsAttribute("category")) {
-            modelMap.addAttribute("category",new Category());
+            modelMap.addAttribute("category", new Category());
         }
         modelMap.addAttribute("action", "/categories/save");
         modelMap.addAttribute("submit", "Add");
@@ -49,4 +50,21 @@ public class CategoryController {
         categoryService.delete(categoryService.findById(id));
         return "redirect:/categories";
     }
+
+    @RequestMapping(value ="categories/{id}/edit")
+    public String formEditCategory(@PathVariable int id, ModelMap modelMap) {
+        if (!modelMap.containsAttribute("category")) {
+            modelMap.addAttribute("category", categoryService.findById(id));
+        }
+        modelMap.addAttribute("action","/categories/" + id);
+        modelMap.addAttribute("submit", "Update");
+        return "category/form";
+    }
+
+    @RequestMapping(value = "/categories/{id}", method = RequestMethod.POST)
+    public String updateCategory(Category category) {
+        categoryService.save(category);
+        return "redirect:/categories/" + category.getId();
+    }
+
 }

@@ -61,7 +61,7 @@ public class RecipeController {
     }
 
     @RequestMapping(value = "/recipes/{id}", method = RequestMethod.POST)
-    public String updateGif(Recipe recipe) {
+    public String updateRecipe(Recipe recipe) {
         recipeService.save(recipe);
         return "redirect:/recipes/" + recipe.getId();
     }

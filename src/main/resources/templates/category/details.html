@@ -10,6 +10,7 @@
             <h3 th:text="${recipe.name}">Recipe Name</h3>
         </a>
     </div>
+    <a th:href="@{|/categories/${category.id}/edit|}">Edit</a>
     <form th:action="@{|/categories/${category.id}/delete|}" method="post">
         <button type="submit">Delete</button>
     </form>
