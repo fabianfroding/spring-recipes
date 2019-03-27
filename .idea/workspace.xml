@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="973f73cd-3852-4449-9d09-791b213bf186" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/springrecipes.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/springrecipes.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/app.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -60,8 +56,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -421,7 +417,6 @@
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/service/CategoryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/app.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/category/form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/index.html" />
@@ -431,6 +426,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/recipe/details.html" />
         <option value="$PROJECT_DIR$/src/main/java/springrecipes/web/controller/RecipeController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app.css" />
       </list>
     </option>
   </component>
@@ -440,7 +436,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="975" />
     <option name="height" value="1050" />
@@ -672,15 +668,15 @@
       <workItem from="1553458920616" duration="1150000" />
       <workItem from="1553554383869" duration="2108000" />
       <workItem from="1553592375158" duration="2184000" />
-      <workItem from="1553726838188" duration="2089000" />
+      <workItem from="1553726838188" duration="3496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30127000" />
+    <option name="totallyTimeSpent" value="31534000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1080,8 +1076,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
