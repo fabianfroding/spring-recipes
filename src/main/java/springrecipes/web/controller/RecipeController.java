@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springrecipes.model.Recipe;
+import springrecipes.service.CategoryService;
 import springrecipes.service.RecipeService;
 
 @Controller
 public class RecipeController {
     @Autowired
     private RecipeService recipeService;
+    @Autowired
+    private CategoryService categoryService;
 
     @RequestMapping(value = {"/", "/recipes"})
     public String listRecipes(ModelMap modelMap) {
@@ -23,6 +26,7 @@ public class RecipeController {
     @RequestMapping("/recipes/{id}")
     public String recipeDetails(@PathVariable int id, ModelMap modelMap) {
         modelMap.put("recipe", recipeService.findById(id));
+        modelMap.put("category", recipeService.findById(id).getCategory());
         modelMap.addAttribute("action", "/recipes/delete");
         modelMap.addAttribute("submit", "Delete");
         return "recipe/details";
@@ -31,8 +35,9 @@ public class RecipeController {
     @RequestMapping("/recipes/add")
     public String formNewRecipe(ModelMap modelMap) {
         if(!modelMap.containsAttribute("recipe")) {
-            modelMap.addAttribute("recipe",new Recipe());
+            modelMap.addAttribute("recipe", new Recipe());
         }
+        modelMap.addAttribute("categories", categoryService.findAll());
         modelMap.addAttribute("action", "/recipes/save");
         modelMap.addAttribute("submit", "Add");
         return "recipe/form";

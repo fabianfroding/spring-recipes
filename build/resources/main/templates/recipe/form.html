@@ -8,6 +8,10 @@
         <input type="hidden" th:field="*{id}"/>
         <input type="text" th:field="*{name}" placeholder="Name"/>
         <input type="text" th:field="*{description}" placeholder="Description"/>
+        <select th:field="*{category.id}">
+            <option value="0" disabled="disabled">Select a category</option>
+            <option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}">Category</option>
+        </select>
         <button th:text="${submit}" type="submit" class="button">Add</button>
     </form>
 </body>
